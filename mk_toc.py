@@ -18,4 +18,4 @@ for root, dirs, files in os.walk('.'):
         if name=='mk_toc.py':continue
         if name=='README.md':continue
         if name=='tmp':continue
-        print ('%s* [%s](%s)' % (tab,name[:-3], root+name) )
+        print ('%s* [%s](%s)' % (tab,name[:-3], root+'/'+name) )
