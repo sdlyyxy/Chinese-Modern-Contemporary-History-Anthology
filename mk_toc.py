@@ -7,8 +7,11 @@ for root, dirs, files in os.walk('.'):
         if c=='/':tab+='\t'
     if root[:6]=='./.git':continue
     if root=='./.vscode':continue
+    pos=0
+    for index,c in enumerate(root):
+        if c=='/':pos=index+1 
     if root!='.':
-        print('%s* %s'%(tab[1:],root[2:]))
+        print('%s* %s'%(tab[1:],root[pos:]))
     for name in files:
         if name=='.DS_Store':continue
         if name=='.gitignore':continue
