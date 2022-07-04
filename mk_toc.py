@@ -2,6 +2,8 @@ import os
 _root = os.getcwd()
 dep = 0
 for root, dirs, files in os.walk('.'):
+    dirs.sort()
+    files.sort()
     tab = ''
     for c in root:
         if c == '/':
