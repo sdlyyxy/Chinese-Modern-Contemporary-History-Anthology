@@ -17,6 +17,8 @@ for root, dirs, files in os.walk('.'):
         continue
     if root == './.vscode':
         continue
+    if root == './assets':
+        continue
     pos = 0
     for index, c in enumerate(root):
         if c == '/':
